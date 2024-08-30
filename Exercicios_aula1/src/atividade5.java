@@ -10,14 +10,14 @@ public class atividade5 {
     }
     
     public static void main(String[] args) {
-        String[] vetor1 = {"A", "B", "C", "D", "E"}; //passa os valores
-        Integer[] vetor2 = {1, 2, 3, 4, 5}; // passa os valores 
+        String[] vetor1 = {"A", "B", "C", "D", "E"}; 
+        Integer[] vetor2 = {1, 2, 3, 4, 5}; 
 
         Object[] resultado = intercalarVetores(vetor1, vetor2); //chama o metodo
 
         System.out.println("Vetor intercalado:"); //printa na tela
-        for (Object elem : resultado) { // imprime casa elemento do vetor
-            System.out.print(elem + " "); // printa na tela
+        for (int i = 0; i < resultado.length; i++ ) { // imprime casa elemento do vetor
+            System.out.print(resultado[i] + " "); // printa na tela
         }
         System.out.println();
     }
