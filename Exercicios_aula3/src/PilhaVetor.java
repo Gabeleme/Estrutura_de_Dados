@@ -1,10 +1,10 @@
 public class PilhaVetor {
     /*
      * Metodos obrigatorios
-     * Empilhar (obj elmento)
-     * obj desempilhar()
-     * Booleano Pilha Vazia()
-     * Booleano Pilha Cheia()
+     * Empilhar (obj elmento): Adicionar um elemento ao topo da pilha
+     * obj desempilhar(): Remove e retorna o elemento do topo da pilha
+     * Booleano Pilha Vazia(): Verifica se a pilha está vazia
+     * Booleano Pilha Cheia(): Verifica se a pilha está cheia
      */
 
     Object[] elementos;
@@ -17,17 +17,17 @@ public class PilhaVetor {
 
     // empilha o item no topo da pilha se não estiver cheia 
     public void empilhar(Object item) {
-        if(!pilhaCheia()){
-            elementos[indice] = item; 
+        if(!pilhaCheia()){ // verifica se não está cheia
+            elementos[indice] = item; // Adiciona o item na posição indicada pelo índice
             System.out.println(elementos[indice]);
-            indice++; 
+            indice++;  // Incrementa o índice
         }
     }
     //Desempilhar remove o item do topo da pilha e retorna o valor se não estiver vazia
     public Object desempilha(){
-        if(!pilhaVazia()){
+        if(!pilhaVazia()){ //verifica se não está vazia
             indice--; // decrementa 
-            return elementos[indice]; 
+            return elementos[indice]; // Retorna o item do topo da pilha
         }else{
             return null; 
         }
