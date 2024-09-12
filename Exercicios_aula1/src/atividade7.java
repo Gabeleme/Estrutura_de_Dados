@@ -1,7 +1,7 @@
 public class atividade7 {
     public static void main(String[] args) {
 
-        int[][] matriz = { // Criação da matriz
+        int[][] matriz = { // Criação da matriz 3x2
                 { 1, 2 },
                 { 3, 4 },
                 { 5, 6 }
@@ -18,8 +18,8 @@ public class atividade7 {
 
     // Método para transpor a matriz 
     public static int[][] transporMatriz(int[][] matriz) {
-        int linhas = matriz.length; 
-        int colunas = matriz[0].length; 
+        int linhas = matriz.length; // Número de linhas da matriz original
+        int colunas = matriz[0].length;   // Número de colunas da matriz original
 
         int[][] matrizTransposta = new int[colunas][linhas]; // matriz para armazenar o nova matriz
         
@@ -35,13 +35,13 @@ public class atividade7 {
 
     // Método para imprimir uma matriz
     public static void imprimirMatriz(int[][] matriz) {
-        int linhas = matriz.length;
-        int colunas = matriz[0].length;
+        int linhas = matriz.length; // Número de linhas da matriz
+        int colunas = matriz[0].length; // Número de colunas da matriz
 
         // for para percorrer a matriz, linha e coluna
         for (int i = 0; i < linhas; i++) {
             for (int j = 0; j < colunas; j++) {
-                System.out.print(matriz[i][j] + "\t");
+                System.out.print(matriz[i][j] + "\t"); // Imprime cada elemento seguido de uma tabulação
             }
             System.out.println();
         }

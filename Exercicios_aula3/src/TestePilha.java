@@ -13,7 +13,7 @@ public class TestePilha {
         // ------ empilhar ----------
         System.out.print("Empilhando: ");
         for (int i = 0; i < 10; i++) { // empilha os números de 0 a 9 na pilha
-            minhaPilha.empilhar(i); 
+            minhaPilha.empilhar(i); // Adiciona o item ao topo da pilha
         }
 
         System.out.println();
@@ -38,9 +38,9 @@ public class TestePilha {
 
         // ------ empilhar ----------
         System.out.print("\nEmpilhando: ");
-        for (int i = 0; i < 10; i++) { // empilha de 0 a 9 na pilha
-            minhaPilha2.empilhar(i); // empilha
-            System.out.println(i); // imprime
+        for (int i = 0; i < 10; i++) { // Empilha de 0 a 9 na pilha
+            minhaPilha2.empilhar(i); // Empilha Adiciona o item ao topo da pilha
+            System.out.println(i); // Imprime o item empilhado
         }
 
         System.out.println();
@@ -48,7 +48,7 @@ public class TestePilha {
 
         // ------------- desempilhar ---------
         System.out.println("Desempilhando:");
-        for (int i = 0; i < 10; i++) { // desempilha
+        for (int i = 0; i < 10; i++) { // Desempilha os elementos da pilha
             System.out.println(minhaPilha2.desempilhar()); //imprime
         }
 
@@ -56,7 +56,7 @@ public class TestePilha {
         System.out.println("-".repeat(40)); // linha de separação
 
         // ----------- Palindromo --------------
-        Palindromo p = new Palindromo(); // instancia Palindromo
+        Palindromo p = new Palindromo(); // instancia a classe Palindromo
 
         //palavras para verificar
         char[] palavra1 = {'a', 'n', 'a'}; 

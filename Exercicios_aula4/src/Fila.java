@@ -11,9 +11,9 @@ public class Fila {
 
     // ** A fila deverá ser implementada utilizando Arraylist
 
-    List <Object> fila = new ArrayList<>(); 
+    List <Object> fila = new ArrayList<>(); // Lista que armazena os elementos da fila
 
-    public void adicionar(Object item){
+    public void adicionar(Object item){ // Adiciona um item ao final da fila
         fila.add(item); 
     }
 

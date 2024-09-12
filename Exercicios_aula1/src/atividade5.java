@@ -6,12 +6,12 @@ public class atividade5 {
             V[2 * i + 1] = vetor2[i]; //posiciona cada elemento do vetor 
         }
 
-        return V;
+        return V; // Retorna o vetor intercalado
     }
     
     public static void main(String[] args) {
-        String[] vetor1 = {"A", "B", "C", "D", "E"}; 
-        Integer[] vetor2 = {1, 2, 3, 4, 5}; 
+        String[] vetor1 = {"A", "B", "C", "D", "E"}; // Define o primeiro vetor de strings
+        Integer[] vetor2 = {1, 2, 3, 4, 5};  // Define o segundo vetor de inteiros
 
         Object[] resultado = intercalarVetores(vetor1, vetor2); //chama o metodo
 
