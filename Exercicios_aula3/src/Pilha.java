@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Pilha {
+    // Pilha(LIFO (Last In, First Out)
     ArrayList<Object> elementos; // Lista que armazena os elementos da pilha
 
     //Construtor
