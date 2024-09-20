@@ -1,4 +1,5 @@
 public class atividade3 {
+    // Crie um método que receba como parâmetro um número binário na forma de um vetor com 8 posições e retorne esse número convertido para decimal.
     public static void main(String[] args) {
         // Define um vetor que representa um número binário
         int vetorbi[] = {0, 0, 0, 0, 1, 0, 1, 0};  // Esse binário corresponde a 10 em decimal

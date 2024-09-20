@@ -11,41 +11,39 @@ public class MediaMovelVetor {
     int janela;// Tamanho da janela móvel
 
     public MediaMovelVetor(int tamanhoAmostras, int janela) {
-        this.janela = janela;
-        vetorAmostras = new int[tamanhoAmostras];
-        mediaMovel = new int[tamanhoAmostras - janela];
-        preencherAmostras();
+        this.janela = janela; // inicializa o tamanho da janela movel
+        vetorAmostras = new int[tamanhoAmostras]; // cria um vetor para armazenar as amostras 
+        mediaMovel = new int[tamanhoAmostras - janela]; // cria um vetor para media moveis
+        preencherAmostras(); // preenche o vetor de amostra
     }
 
     public void calculaMediaMovel() {
         // Calcula a média das amostras considerando a janela estipulada
-        int media;
-        
+        int media; // variavel para a media
+
         System.out.println("Médias: ");
-        // implemente o calculo da media movel aqui ====
+        // implemente o calculo da media movel aqui 
         for (int i = 0; i < vetorAmostras.length - janela; i++) {
             // desloca a janela ao longo do vetor de amostra
-            int soma = 0; 
+            int soma = 0; // inicializa a soma da janela
             for (int j = 0; j < janela; j++) {
-                soma += vetorAmostras[i + j];
-                
-            }
-            media = soma / janela;
-            mediaMovel[i] = media;
-        }
-        
+                soma += vetorAmostras[i + j]; // soma os elementos da janela
 
+            }
+            media = soma / janela; // calcula a média
+            mediaMovel[i] = media; // Armazena a média
+        }
 
     }
 
     private void preencherAmostras() {
         // Preenche o vetor de amostras com valores aleatórios
-        Double numeroRandomico;
+        Double numeroRandomico; // variavel que armazena números aleatorios
         System.out.println("Amostras: ");
         for (int i = 0; i < vetorAmostras.length; i++) {
-            numeroRandomico = (Math.random() * 400);
-            vetorAmostras[i] = numeroRandomico.intValue();
-            System.out.print(vetorAmostras[i] + " | ");
+            numeroRandomico = (Math.random() * 400); // gera número aleatorio entre 0 e 400
+            vetorAmostras[i] = numeroRandomico.intValue(); // armazena o número aleatorio convertido para inteiro
+            System.out.print(vetorAmostras[i] + " | "); // imprime o valor da amostra 
         }
     }
 }

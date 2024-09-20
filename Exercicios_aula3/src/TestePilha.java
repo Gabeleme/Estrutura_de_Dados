@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class TestePilha {
     public static void main(String[] args) {
         // ---------------Pilha com vetor------------------------
@@ -7,10 +9,10 @@ public class TestePilha {
         System.out.print("-".repeat(40)); // linha de separação
 
         System.out.println("\nPilha com Vetor:");
-        System.out.println("Pilha está vazia?: " + minhaPilha.pilhaVazia()); // Verifica se a pilha está vazia e imprime
-                                                                             // o resultado
-        System.out.println("Pilha está cheia?: " + minhaPilha.pilhaCheia()); // Verifica se a pilha está cheia e imprime
-                                                                             // o resultado
+        // Verifica se a pilha está vazia e imprime o resultado
+        System.out.println("Pilha está vazia?: " + minhaPilha.pilhaVazia());
+        // Verifica se a pilha está cheia e imprime o resultado
+        System.out.println("Pilha está cheia?: " + minhaPilha.pilhaCheia());
 
         // ------ empilhar ----------
         System.out.print("Empilhando:\n");
@@ -35,7 +37,8 @@ public class TestePilha {
 
         System.out.println("Pilha com Lista:");
 
-        System.out.println("Pilha está vazia?: " + minhaPilha2.pilhaVazia()); // Verifica se a pilha está vazia e imprime o resultado
+        // Verifica se a pilha está vazia e imprime o resultado
+        System.out.println("Pilha está vazia?: " + minhaPilha2.pilhaVazia()); 
 
         // ------ empilhar ----------
         System.out.print("Empilhando:\n");
@@ -71,8 +74,21 @@ public class TestePilha {
         System.out.println("-".repeat(40)); // linha de separação
 
         // ----------- Pilha em ordem Crescente --------------
-
+        Stack<Integer> pilha = new Stack<>();
         
+        pilha.push(5);
+        pilha.push(20);
+        pilha.push(1);
+        pilha.push(0);
+        pilha.push(4);
+        pilha.push(15);
+
+        System.out.println("Pilha original: " + pilha);
+
+        // Ordenando a pilha
+        PilhaOrdenada.ordenarPilha(pilha);
+
+        System.out.println("Pilha ordenada: " + pilha);
     }
 
 }

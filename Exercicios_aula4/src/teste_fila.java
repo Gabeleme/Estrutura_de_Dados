@@ -31,7 +31,7 @@ public class teste_fila {
         System.out.println(p1.getNome());
         filaINSS.adicionar(p1);
 
-        p2 = new Pessoa(65, "VJoao");
+        p2 = new Pessoa(65, "Joao");
         System.out.println(p2.getNome());
         filaINSS.adicionar(p2);
 

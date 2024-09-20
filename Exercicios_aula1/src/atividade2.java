@@ -1,4 +1,5 @@
 public class atividade2 {
+    //Crie um método que receba 3 vetores com 8 posições cada e retorne uma matriz de 8x3 posições com os respectivos valores armazenados nos vetores.
     public static void main(String[] args) {
         // Declara três vetores com 8 elementos cada um
         int vetor1[] = { 1, 2, 3, 4, 5, 6, 7, 8 };

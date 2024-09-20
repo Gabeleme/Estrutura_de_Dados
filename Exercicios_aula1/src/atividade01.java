@@ -1,4 +1,6 @@
 public class atividade01 {
+    // Crie um método que receba 1 vetor com 8 posições, inverta a ordem dos itens e retorne o vetor invertido
+    
     public static void main(String[] args) throws Exception {
         // Declara e inicializa um vetor com 8 números inteiros
         int vetor[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
