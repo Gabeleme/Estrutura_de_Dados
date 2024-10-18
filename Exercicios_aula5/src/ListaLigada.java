@@ -1,13 +1,13 @@
 public class ListaLigada {
-    private No inicio;
-    private No fim;
-    private int tamanho;
+    private No inicio; //ponteiro de inicio da lista
+    private No fim; // ponteiro para o final da lista
+    private int tamanho; // tamanho da lista 
 
     // criando um cosntrutor para permitir instanciar uma lista ligada vazia
     public ListaLigada() {
-        inicio = null;
-        fim = null;
-        tamanho = 0;
+        inicio = null;//inicia o inicio como nulo
+        fim = null; // inicia o fim como nulo
+        tamanho = 0; // inicia o tamanho como 0
     }
 
     public void adicionar(Object info) {
@@ -40,28 +40,28 @@ public class ListaLigada {
         //Atividade: Altere a método Adicionar da Lista Ligada para permitir adicionar na posição do índice 0;
 
         if(indice == 0){ // Verifica se o índice é 0, para adicionar no início da lista
-            novoNo = new No(info, inicio); 
-            inicio =  novoNo; 
-            tamanho++;
+            novoNo = new No(info, inicio); // Cria o novo nó apontando para o antigo início
+            inicio =  novoNo; // Atualiza o início para o novo nó
+            tamanho++; // Incrementa o tamanho
         }
         else if(indice < tamanho){
             // adiciona nas demais posições 
             //aux aponta para o No que está na posição anterior a posição que será adicionada
             aux = percorreLista(indice - 1); 
-            novoNo = new No (info, aux.getProximoNo());
-            aux.setProximoNo(novoNo);
-            tamanho++;
+            novoNo = new No (info, aux.getProximoNo()); // Cria o novo nó
+            aux.setProximoNo(novoNo);  // Faz o nó anterior apontar para o novo nó
+            tamanho++; // Incrementa o tamanho
         }
-        else if(indice == tamanho){
+        else if(indice == tamanho){ // Se o índice é igual ao tamanho, adiciona na última posição
             //adiciona na ultima posição
-            adicionar(info);
+            adicionar(info);// Chama o método para adicionar no final
             
         }
     }
 
     // retornará info do nó apontado pelo indice
     public Object getLista(int indice) {
-        return percorreLista(indice).getInfo();
+        return percorreLista(indice).getInfo(); // chama o metodo para percorrer a lista
     }
 
     // percorre a lista ligada e retorna o No referente ao indice
@@ -72,9 +72,9 @@ public class ListaLigada {
                 // percorre a lista até a posição indicada pelo indice
                 aux = aux.getProximoNo();
             }
-            return aux;
+            return aux; // retorna o nó encontrado
         } else {
-            return null;
+            return null; // Retorna nulo se o índice for inválido
         }
     }
 
@@ -98,13 +98,10 @@ public class ListaLigada {
         }
         else if(indice == tamanho -1){
             No aux = percorreLista(indice - 1);
-            aux.setProximoNo(null);
-            fim = aux;
-            tamanho--; 
+            aux.setProximoNo(null); // Faz o nó anterior apontar para nulo
+            fim = aux; // Atualiza o ponteiro fim
+            tamanho--; // decrementa o tamanho
         }
     }
-
-
-
 
 }
