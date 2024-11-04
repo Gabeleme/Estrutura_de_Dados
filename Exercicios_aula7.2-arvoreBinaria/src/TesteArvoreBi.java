@@ -1,7 +1,6 @@
 public class TesteArvoreBi {
     public static void main(String[] args) {
-        NoDaArvorebinaria raiz = new NoDaArvorebinaria(1); // cria a raiz com valor 1, no caso inicializa como raiz
-                                                           // principal 1
+        NoDaArvorebinaria raiz = new NoDaArvorebinaria(1); // cria a raiz com valor 1, no caso inicializa como raiz principal 1
         raiz.esquerda = new NoDaArvorebinaria(2); // Cria o nó à esquerda da raiz com valor 2
         raiz.direita = new NoDaArvorebinaria(3); // Cria o nó à direita da raiz com valor 3
         raiz.esquerda.esquerda = new NoDaArvorebinaria(4); // Cria o nó à esquerda do nó 2 com valor 4

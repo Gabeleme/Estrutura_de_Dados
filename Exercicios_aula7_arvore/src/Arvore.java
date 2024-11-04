@@ -43,44 +43,48 @@ public class Arvore {
 
     }
 
-    // Método para buscar um nó na árvore e retornar sua profundidade
-    public int buscar(int info) {
-        return buscarRecursivo(info, raiz, 0); // Inicia a busca a partir da raiz com profundidade 0
-    }
-
-    // Método recursivo para buscar um nó
-    private int buscarRecursivo(int info, ArvoreBinaria raiz, int profundidade) {
-        if (raiz == null) {
-            return -1; // Nó não encontrado
-        }
-        // Verifica se o valor do nó atual é igual ao valor buscado
-        if (info == Integer.parseInt(raiz.getInfo().toString())) {
-            return profundidade; // Retorna a profundidade do nó encontrado
-        }
-        // Se o valor buscado for menor, busca na subárvore da esquerda
-        if (info < Integer.parseInt(raiz.getInfo().toString())) {
-            return buscarRecursivo(info, raiz.getNoEsquerda(), profundidade + 1);
-        } else {
-            // Se o valor buscado for maior, busca na subárvore da direita
-            return buscarRecursivo(info, raiz.getNoDireita(), profundidade + 1);
+    // Função para imprimir os valores da árvore em pré-ordem
+    // Pré-ordem: o pai é visitado antes dos filhos, ou seja, Pai-Esquerda-Direita;
+    private void imprimirPreOrdem(ArvoreBinaria No) {
+        if (No != null) {
+            System.out.print(No.getInfo() + " "); // imprime o pai
+            imprimirPreOrdem(No.getNoEsquerda()); // imprime o valor da esquerda
+            imprimirPreOrdem(No.getNoDireita()); // imprime a direita
         }
     }
 
-    // criar metodo para percorrer e imprimir
-    // Inicia o percurso da árvore e imprime os valores e profundidades
-    public void percorrerEImprimir(){
-        percorrerEImprimirRecursivo(raiz, 0); // Começa pela raiz com profundidade 0
+    public void imprimirPreOrdem(){
+        imprimirPreOrdem(raiz);
     }
 
-    // Percorre e imprime 
-    private void percorrerEImprimirRecursivo(ArvoreBinaria raiz, int profundidade){
-        if(raiz != null){ // verifica se não é nulo
-            percorrerEImprimirRecursivo(raiz.getNoEsquerda(), profundidade + 1); // Percorre a esquerda
-            System.out.println("Valor: " + raiz.getInfo() + " Profundidade: " + profundidade); // imprime o valor e a profundidade
-            percorrerEImprimirRecursivo(raiz.getNoDireita(), profundidade + 1); // Percorre a direita
+    // Função para imprimir os valores da árvore em ordem
+    // Em ordem: o pai é visitado entre os filhos, ou seja, Esquerda-Pai-Direita;
+    private void imprimirEmOrdem(ArvoreBinaria No) {
+        if (No != null) {
+            imprimirEmOrdem(No.getNoEsquerda()); // imprime a esquerda
+            System.out.print(No.getInfo() + " "); // imprime o pai
+            imprimirEmOrdem(No.getNoDireita()); // imprime a direita
+
         }
     }
 
-    
-    
+    public void imprimirEmOrdem(){
+        imprimirEmOrdem(raiz);
+    }
+
+    // Função para imprimir os valores da árvore em pós-ordem
+    // Pós-ordem: o pai é visitado após os filhos, ou seja, Esquerda-Direita-Pai
+    private void ImprimirPosOrdem(ArvoreBinaria No) {
+        if (No != null) {
+            ImprimirPosOrdem(No.getNoEsquerda()); // imprime a esquerda
+            ImprimirPosOrdem(No.getNoDireita()); //imprimir a direita
+            System.out.print(No.getInfo() + " "); //imprime o pai 
+        }
+
+    }
+
+    public void ImprimirPosOrdem(){
+        ImprimirPosOrdem(raiz); 
+    }
+
 }
